@@ -1,0 +1,134 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - João Victor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+    <header class="cabecalho">
+        <h1>João Victor</h1>
+        <p>Estudante de Engenharia de Software</p>
+        <nav class="menu" aria-label="Navegação principal">
+            <a href="#sobre">Sobre mim</a>
+            <a href="#conhecimentos">Conhecimentos</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+ 
+    <main id="principal">
+        <section id="sobre" class="secao" aria-labelledby="t-sobre">
+            <h2 id="t-sobre">Sobre mim</h2>
+            <p>
+                Meu nome é João Victor e faço Engenharia de Software.
+                Estou começando a aprender programação e ainda estou
+                conhecendo melhor a área de front-end.
+            </p>
+            <p>
+                Objetivo: conseguir um estágio em desenvolvimento web para
+                ganhar experiência e fazer projetos reais. Até aqui, fiz
+                programas em Java e páginas em HTML nas aulas do curso.
+            </p>
+        </section>
+ 
+        <section id="conhecimentos" class="secao" aria-labelledby="t-conhecimentos">
+            <h2 id="t-conhecimentos">Conhecimentos</h2>
+            <div class="tabela-responsiva">
+                <table>
+                    <caption>Habilidades e onde as usei</caption>
+                    <thead>
+                        <tr><th scope="col">Tecnologia</th><th scope="col">Nível</th><th scope="col">Onde usei</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>HTML e CSS</td><td>Iniciante</td><td>Este portfólio</td></tr>
+                        <tr><td>JavaScript</td><td>Iniciante</td><td>Filtro de projetos e formulário</td></tr>
+                        <tr><td>Java</td><td>Iniciante</td><td>Programa de notas</td></tr>
+                        <tr><td>Banco de dados</td><td>Iniciante</td><td>Exercícios de aula</td></tr>
+                        <tr><td>Git e GitHub</td><td>Iniciante</td><td>Versionamento dos projetos</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+ 
+        <section id="projetos" class="secao" aria-labelledby="t-projetos">
+            <h2 id="t-projetos">Projetos</h2>
+            <p>Projetos feitos em aula, identificados como tal.</p>
+            <div id="filtros" class="filtros" role="group" aria-label="Filtrar projetos por tecnologia"></div>
+            <label for="busca">Buscar projeto</label>
+            <input type="search" id="busca" name="busca" autocomplete="off">
+            <p id="contagem" class="contagem" role="status"></p>
+            <p id="sem-resultados" class="vazio" hidden>
+                Nenhum projeto encontrado. Apague a busca ou escolha "Todos".
+            </p>
+            <div id="lista-projetos"></div>
+        </section>
+ 
+        <section id="contato" class="secao" aria-labelledby="t-contato">
+            <h2 id="t-contato">Contato</h2>
+            <p>
+                E-mail: <a href="mailto:SEU-EMAIL@exemplo.com">joopinheirojo@gmail.com</a> |
+                <a href="https://github.com/SEU-USUARIO">GitHub</a>
+            </p>
+            <p id="aviso-demo" class="aviso">
+                Este formulário é uma demonstração: nenhum e-mail é enviado.
+                Para falar comigo de verdade, use o e-mail acima.
+            </p>
+ 
+            <form id="form-contato" novalidate aria-describedby="aviso-demo">
+                <div id="resumo-erros" class="resumo" tabindex="-1" hidden></div>
+ 
+                <label for="nome">Nome</label>
+                <p id="nome-ajuda" class="ajuda">Obrigatório, de 3 a 80 caracteres.</p>
+                <input type="text" id="nome" name="nome" required autocomplete="name" aria-describedby="nome-ajuda nome-erro">
+                <p id="nome-erro" class="erro"></p>
+ 
+                <label for="email">E-mail</label>
+                <p id="email-ajuda" class="ajuda">Obrigatório. Usado só para eu responder.</p>
+                <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-ajuda email-erro">
+                <p id="email-erro" class="erro"></p>
+ 
+                <label for="motivo">Motivo do contato</label>
+                <p id="motivo-ajuda" class="ajuda">Obrigatório.</p>
+                <select id="motivo" name="motivo" required aria-describedby="motivo-ajuda motivo-erro">
+                    <option value="">Selecione um motivo</option>
+                    <option value="Oportunidade profissional">Oportunidade profissional</option>
+                    <option value="Projeto freelance">Projeto freelance</option>
+                    <option value="Outro">Outro</option>
+                </select>
+                <p id="motivo-erro" class="erro"></p>
+ 
+                <div id="assunto-box" hidden>
+                    <label for="assunto">Assunto adicional</label>
+                    <p id="assunto-ajuda" class="ajuda">Obrigatório para "Outro", de 5 a 100 caracteres.</p>
+                    <input type="text" id="assunto" name="assunto" disabled aria-describedby="assunto-ajuda assunto-erro">
+                    <p id="assunto-erro" class="erro"></p>
+                </div>
+ 
+                <label for="mensagem">Mensagem</label>
+                <p id="mensagem-ajuda" class="ajuda">Obrigatória, de 30 a 1000 caracteres.</p>
+                <textarea id="mensagem" name="mensagem" rows="5" required aria-describedby="mensagem-ajuda contador mensagem-erro"></textarea>
+                <p id="contador" class="ajuda"></p>
+                <p id="mensagem-erro" class="erro"></p>
+ 
+                <label for="modo-envio">Resultado do envio simulado (controle de teste)</label>
+                <select id="modo-envio" name="modo-envio">
+                    <option value="sucesso">Sucesso</option>
+                    <option value="falha">Falha</option>
+                </select>
+ 
+                <button type="submit" id="botao-enviar">Enviar</button>
+                <p id="status-form" class="status" role="status"></p>
+            </form>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>João Victor - 2026</p>
+        <p>Atividade de Programação Front-End</p>
+    </footer>
+</body>
+</html>

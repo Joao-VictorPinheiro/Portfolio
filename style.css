@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+ 
+a {
+    color: #0b4f9c;
+}
+ 
+a:hover {
+    color: #082f5e;
+}
+ 
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
+ 
+h1 {
+    font-size: 28px;
+    margin: 0 0 4px;
+}
+ 
+h2 {
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+ 
+h3 {
+    font-size: 18px;
+    margin: 20px 0 6px;
+}
+ 
+p {
+    margin: 0 0 12px;
+}
+ 
+ 
+main,
+.extra {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+ 
+.cabecalho {
+    background-color: #000;
+    color: #fff;
+    padding: 36px max(20px, calc((100% - 680px) / 2)) 20px;
+}
+ 
+.cabecalho p {
+    margin: 0 0 14px;
+    color: #ccc;
+}
+ 
+.menu a {
+    margin-right: 16px;
+    color: #fff;
+}
+ 
+.menu a:focus-visible {
+    outline-color: #fff;
+}
+ 
+ 
+.secao {
+    padding: 28px 0 8px;
+    border-bottom: 1px solid #ddd;
+}
+ 
+.secao:last-child {
+    border-bottom: none;
+}
+ 
+ul {
+    margin: 0 0 12px;
+    padding-left: 22px;
+}
+ 
+ 
+.tabela-responsiva {
+    overflow-x: auto;
+}
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+ 
+th,
+td {
+    border: 1px solid #bbb;
+    padding: 8px 10px;
+    text-align: left;
+}
+ 
+th {
+    background-color: #000;
+    color: #fff;
+}
+ 
+ 
+.projeto {
+    margin-bottom: 20px;
+}
+ 
+.projeto h3 {
+    margin-top: 0;
+}
+ 
+ 
+form label {
+    display: block;
+    margin-top: 12px;
+}
+ 
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid #888;
+}
+ 
+button {
+    margin: 16px 0 24px;
+    padding: 8px 18px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #333;
+}
+ 
+ 
+.extra {
+    padding-top: 28px;
+}
+ 
+footer {
+    padding: 20px max(20px, calc((100% - 680px) / 2)) 32px;
+    background-color: #000;
+    font-size: 15px;
+    color: #ccc;
+}
+ 
+footer p {
+    margin: 0 0 4px;
+}
+ 
+ 
+@media (max-width: 480px) {
+    body {
+        font-size: 17px;
+    }
+ 
+    h1 {
+        font-size: 24px;
+    }
+ 
+    .menu a {
+        display: inline-block;
+        margin-right: 14px;
+    }
+}
+ 
+ 
+/* ---- acréscimos da atividade final ---- */
+.pular {
+    position: absolute;
+    left: -9999px;
+}
+ 
+.pular:focus {
+    left: 8px;
+    top: 8px;
+    background: #fff;
+    padding: 6px 10px;
+}
+ 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #0b4f9c;
+    outline-offset: 2px;
+}
+ 
+caption {
+    text-align: left;
+    font-style: italic;
+    padding-bottom: 6px;
+}
+ 
+.projeto,
+.projeto p {
+    overflow-wrap: anywhere;
+}
+ 
+.projeto img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+ 
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+ 
+.filtros button {
+    margin: 0;
+    min-height: 44px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+ 
+.filtros button:hover {
+    background: #eee;
+}
+ 
+.filtros button[aria-pressed="true"] {
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+}
+ 
+.filtros button[aria-pressed="true"]::before {
+    content: "\2713  ";
+}
+ 
+.contagem {
+    margin-top: 12px;
+    font-style: italic;
+}
+ 
+.vazio,
+.aviso {
+    padding: 8px 10px;
+    border-left: 4px solid #555;
+    background: #f3f3f3;
+}
+ 
+select {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+ 
+.ajuda {
+    margin: 2px 0 0;
+    font-size: 15px;
+    color: #555;
+}
+ 
+.erro {
+    margin: 4px 0 0;
+    color: #a40000;
+    font-weight: bold;
+}
+ 
+.erro:empty {
+    display: none;
+}
+ 
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border: 2px solid #a40000;
+}
+ 
+.resumo {
+    border: 2px solid #a40000;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+ 
+.status {
+    font-weight: bold;
+}
+ 
+button:disabled {
+    cursor: wait;
+    opacity: 0.6;
+}
+ 
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
